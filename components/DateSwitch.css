@@ -1,0 +1,36 @@
+.date-switch {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  padding: 1px;
+  margin: 5px;
+}
+
+.date-button {
+  width: 150px; 
+  height: 50px; 
+  padding: 1px;
+  margin: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.date-button:hover {
+  background-color: #d1d5db; 
+}
+
+.date-button.active {
+  background-color: #fcec3ee8; 
+  color: #374151;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.date-button.active:hover {
+  background-color: #fcec3ee8; 
+}
