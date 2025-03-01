@@ -12,11 +12,11 @@ function Weathercard({
   // Функція для вибору іконки та класу для зміни кольору
   const getWeatherIcon = (condition) => {
     if (condition === "clear sky" || condition === "sunny") {
-      return <WiDaySunny className="weather-icon-main" />;
+      return <WiDaySunny className="weather-icon-main" data-testid="weather-icon-main" />;
     } else if (condition === "cloudy" || condition === "overcast") {
-      return <WiCloud className="weather-icon-main cloudy" />; // Додаємо клас cloudy
+      return <WiCloud className="weather-icon-main cloudy" data-testid="weather-icon-main" />;
     } else {
-      return <WiCloud className="weather-icon-main cloudy" />;  // default іконка для інших випадків
+      return <WiCloud className="weather-icon-main cloudy" data-testid="weather-icon-main" />;  // default іконка для інших випадків
     }
   };
 
@@ -24,7 +24,7 @@ function Weathercard({
     <div className="weather-container">
       <div className="weather-card">
         <p className="weather-item-main">{getWeatherIcon(weatherCondition)}</p>
-        <p className="weather-item-main">{temperature}°C</p>
+        <p className="weather-item-main">{Math.round(temperature)}°C</p>
         <p className="weather-item"><WiHumidity className="weather-icon" /> Humidity: {humidity}%</p>
         <p className="weather-item"><WiStrongWind className="weather-icon" /> Wind Speed: {windSpeed} m/s</p>
         <p className="weather-item"><WiBarometer className="weather-icon" /> Air Pressure: {airPressure} hPa</p>

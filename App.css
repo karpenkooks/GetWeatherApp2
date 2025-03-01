@@ -27,6 +27,7 @@ body, html {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  position: relative;
   
 }
 
@@ -59,4 +60,30 @@ body, html {
 .error-message {
   color: red;
   font-size: 1rem;
+}
+
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  top: 100%; /* Розміщуємо список прямо під полем вводу */
+  left: 0;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
 }
